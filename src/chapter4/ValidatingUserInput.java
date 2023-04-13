@@ -24,5 +24,6 @@ public class ValidatingUserInput {
         System.out.printf("Passed: %d%nFailed: %d%n", passes, failures);
 
         if (passes > 8) System.out.println("Bonus to instructor");
+
     }
 }
