@@ -16,6 +16,5 @@ public class ReadingNumberUntilASpecifiedSum {
             number += num;
         }
 
-
     }
 }

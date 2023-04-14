@@ -6,17 +6,17 @@ public class DecimalEquivalentOfBinary {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Binary");
-        int binary = scanner.nextInt();
-        int decimalPart = 0;
-        int mul = 1;
-        int decimal = 0;
-        while (binary != 0){
-            int mainPart = binary /10;
-            decimalPart = binary % 10;
-            decimal += decimalPart * mul;
-            mul *= 2;
-            binary = mainPart;
+        int binaryValue = scanner.nextInt();
+        int remainder = 0;
+        int valueToMultiplyBinaryWith = 1;
+        int decimalValue = 0;
+        while (binaryValue != 0){
+            int wholeNumber = binaryValue /10;
+            remainder = binaryValue % 10;
+            decimalValue += remainder * valueToMultiplyBinaryWith;
+            valueToMultiplyBinaryWith *= 2;
+            binaryValue = wholeNumber;
         }
-        System.out.println(decimal);
+        System.out.println(decimalValue);
     }
 }
