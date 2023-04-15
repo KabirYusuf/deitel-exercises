@@ -14,5 +14,14 @@ class MathematicalConstantTest {
         //Assert that result = 2.5
         assertEquals(2.5, result);
     }
+    @Test
+    void testThatMathematicalConstantForExponential(){
+        //Given that we have a number
+        int number = 3;
+        //If I find the mathematical constant of the exponential
+        double result = MathematicalConstant.findMathematicalConstantForExponential(number);
+        //Assert that result = 13.0
+        assertEquals(13.0, result);
+    }
 
 }

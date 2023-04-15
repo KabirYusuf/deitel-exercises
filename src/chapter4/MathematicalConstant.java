@@ -17,4 +17,23 @@ public class MathematicalConstant {
         }
         return result;
     }
+
+    public static double findMathematicalConstantForExponential(int number) {
+        int count = 1;
+        double result = 1;
+        int factorial = 1;
+        while (count <= number){
+            double exponential = number;
+            for (int i = count; i > 0 ; i--) {
+                exponential *= number ;
+                factorial *= i;
+            }
+            exponential /= number;
+            double exponentialDividedByFactorial = exponential / factorial;
+            factorial = 1;
+            result += exponentialDividedByFactorial;
+            count ++;
+        }
+        return result;
+    }
 }
