@@ -74,7 +74,12 @@ class CryptographyTest {
     }
     @Test
     void testThatDataCanBeDecrypted(){
-
+        //Given that I have an encrypted data
+        int encryptedData = 189;
+        //if the encrypted data is decrypted
+        int originalData = Cryptography.decryptData(encryptedData);
+        //Assert equals that original data = 1234;
+        assertEquals(1234, originalData);
     }
 
 }

@@ -72,4 +72,9 @@ public class Cryptography {
         }
         return result;
     }
+
+    public static int decryptData(int encryptedData) {
+        int swappedEncryptedData = swapEncryptedData(encryptedData);
+        return replaceEncryptedData(swappedEncryptedData);
+    }
 }
