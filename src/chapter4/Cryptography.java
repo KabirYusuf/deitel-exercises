@@ -59,4 +59,17 @@ public class Cryptography {
         int thirdDigit = encryptedData;
         return firstDigit * 1000 + secondDigit * 100 + thirdDigit * 10 + fourthDigit;
     }
+
+    public static int replaceEncryptedData(int swappedEncryptedData) {
+        int result = 0;
+        int multiplyEachDigitBy = 1;
+        for (int i = 0; i < 4; i++) {
+            int digitAtEachPosition = swappedEncryptedData % 10;
+            swappedEncryptedData /= 10;
+            if (digitAtEachPosition < 7) result += multiplyEachDigitBy * (digitAtEachPosition + 10 - 7);
+            else result += multiplyEachDigitBy * (digitAtEachPosition - 7);
+            multiplyEachDigitBy *= 10;
+        }
+        return result;
+    }
 }

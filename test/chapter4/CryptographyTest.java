@@ -61,4 +61,20 @@ class CryptographyTest {
         assertEquals(8901, swappedEncryptedData);
     }
 
+    @Test
+    void testThatSwappedEncryptedDataDigitsCanBeReplacedByTheDigitPlusSevenAndTheRemainderWhenDividedByTen(){
+        //Given that I have a swapped encrypted data
+        int swappedEncryptedData = 8901;
+
+        // If I replace each digit by the remainder of adding seven to the digit and dividing by 10;
+        int replacedDigitData = Cryptography.replaceEncryptedData(swappedEncryptedData);
+
+        //Assert equals that replacedDigitData = 1234;
+        assertEquals(1234, replacedDigitData);
+    }
+    @Test
+    void testThatDataCanBeDecrypted(){
+
+    }
+
 }
